@@ -1,4 +1,8 @@
-// Future interactivity will go here
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("Ike Ike 2025 site loaded.");
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav");
+
+    hamburger.addEventListener("click", function() {
+        mobileNav.classList.toggle("active");
+    });
 });
