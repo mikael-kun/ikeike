@@ -9,7 +9,7 @@
   --color-highlight: #cbd5e1;
   --color-primary: #1e293b;
   --color-primary-active: #090f1d;
-  --color-text-default: #0f172a;
+  --color-text-default: #ffffff;
   --color-text-muted: #475569;
 
   --font-family-body: "Inter", sans-serif;
@@ -40,12 +40,13 @@ body {
 
 /** Navigation Styles **/
 nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    left: 0;
     background: black;
-    width: 100%;
     padding: 10px 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -82,8 +83,12 @@ nav ul li a:hover {
     flex-direction: column;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
+    z-index: 1100;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .hamburger div {
@@ -97,7 +102,7 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 10px;
     background: black;
     width: 200px;
@@ -107,7 +112,10 @@ nav ul li a:hover {
 }
 
 .mobile-nav ul {
+    display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
 }
 
 .mobile-nav ul li {
@@ -118,6 +126,12 @@ nav ul li a:hover {
     display: block;
     padding: 10px;
     text-align: right;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /** Responsive Design Adjustments **/
